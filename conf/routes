@@ -1,0 +1,7 @@
+POST    /users/:userId/quiz/:quizId/answers/  controllers.QuizController.addQuizAnswers(userId: String, quizId: Long)
+
+GET     /users/:userId/remainingQuizzes/     controllers.QuizController.fetchQuizzes(userId: String)
+
+GET     /users/:userId/quizAnswers/        controllers.QuizController.fetchMyQuizAnswers(userId: String)
+
+GET     /users/:userId/quiz/:quizId/score   controllers.QuizController.fetchMyQuizScore(userId: String, quizId: Long)
