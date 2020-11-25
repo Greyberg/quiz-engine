@@ -3,7 +3,7 @@ package db
 import models._
 import slick.ast.BaseTypedType
 import slick.jdbc.JdbcType
-import slick.jdbc.{ MySQLProfile => profile }
+import slick.jdbc.{ PostgresProfile => profile }
 
 object Tables extends Tables
 

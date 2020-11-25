@@ -1,14 +1,21 @@
 # quiz-engine
 
-Many things to do
+## Run the service
+
+1) `docker-compose up -d postgres`
+2) `docker-compose run flyway`
+3) `sbt run`
+
+## Create the db role
+
+connect to postgres and run
+`CREATE ROLE quizzes WITH LOGIN PASSWORD ‘quizzes’;`
+connect to quizzes with 'psql quizzes' and run 
+`GRANT ALL PRIVILEGES ON TABLE user_completed_quizzes TO quizzes;`
+
+## Hit it
 
 One functionally complete POST endpoint to submit a set of quiz answers /users/:userId/quiz/:quizId/answers/
-
-Many attemtps made at dockerizing but decided to remove
-
-SQL to run against a db can be found under db/setup.sql
-
-The service can be run with `sbt run` starting on port 9000
 
 A POST to
 
@@ -26,4 +33,3 @@ body:
        "score": {"value": 21}
 }
 ```
-Will result in a failure to connect to a db. I think this is the only issue.
